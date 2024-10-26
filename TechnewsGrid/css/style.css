@@ -1,0 +1,180 @@
+/*Preto Claro 1E1E1E */
+/*Cinza Claro F2F2F2 */
+/*Preto 000000 */
+/*Amarelo BFF009 */
+/*Branco FFFFFF */
+/*Cinza Escuro 868585 */
+
+:root{
+    --am: #BFF009;
+    --cicl: #F2F2F2;
+    --cies: #868585;
+    --pr: #000000;
+    --prcl: #1E1E1E;
+    --br: #FFFFFF;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+/* CLASSES */
+
+.cabeca{
+    padding: 19px 0px;
+    grid-template-areas: 
+        "header header header"
+        "navigation navigation aside"
+        "content content aside"
+        "footer footer footer";
+}
+
+.center{
+    margin: 0px auto;
+    width: 1312px;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+}
+
+.menucab{
+    background-color: var(--cicl);
+    grid-template-areas: 
+    "ma mb mc md me";
+    justify-items: center;
+}
+
+.ma{
+    grid-area: ma;
+    
+}
+.mb{
+    grid-area: mb;
+}
+.mc{
+    grid-area: mc;
+}
+.md{
+    grid-area: md;
+}
+.me{
+    grid-area: me;
+}
+
+.divassine{
+    justify-items: end;
+}
+
+.assineagora{
+    color: var(--pr);
+    background-color: var(--am);
+    padding: 16px;
+    text-decoration: none;
+}
+
+.minicenter{
+    margin: 0px auto;
+    width: 504px;
+    align-items: center;
+    justify-items: center;
+}
+
+.gap{
+    padding-bottom: 50px;
+}
+
+.fundordp{
+    background-color: var(--prcl);
+}
+
+.rodape{
+    color: var(--cies);
+    padding: 46px 0px;
+    text-align: center;
+}
+
+.p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card{
+    width: 368px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--cicl);
+    border-radius: 8px;
+}
+
+.imgs{
+    gap: 32px;
+    grid-template-areas: 
+    "ca cb cc"
+    "cd ce cf";
+}
+
+/*  */
+
+header section nav a{
+    text-decoration: none;
+    color: var(--pr);
+    padding: 16px;
+}
+
+main header h1{
+    font-size: 48px;
+    padding: 8px 0px;
+}
+
+main header p{
+    font-size: 14px;
+    color: var(--cies);
+    max-width: 354px;
+    margin: 0px auto;
+
+}
+
+main section{
+    width: 1312px;
+    margin: 64px auto;
+}
+
+.card:hover{
+    background-color: var(--pr);
+}
+
+small{
+    background-color: var(--am);
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--prcl);
+    border-radius: 8px;
+}
+
+.card a{
+    color: var(--pr);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card:hover a{
+    color: var(--br);
+}
+
+.card p{
+    color: var(--cies);
+    font-size: 14px;
+}

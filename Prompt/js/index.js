@@ -2,7 +2,7 @@
 // qualquer valor digitado no prompt que não seja entendido como um hexadecimal ou uma cor em inglês,
 // resultaria no fundo continuar branco. Eu testei.
 
-let corzinha = prompt("Digas patrão, qual a cor do fundo: Hexadecimal ou inglês")
+let corzinha = prompt("Digas patrão, qual a cor do fundo: Vermelho, Verde ou Azul em Hexadecimal ou Inglês")
 let body = document.querySelector(".body")
 
 function cor(color) {

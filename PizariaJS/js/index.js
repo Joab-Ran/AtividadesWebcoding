@@ -9,7 +9,7 @@ function fazerPedido(){
     console.log('Quantidade: ' + selecionados.length)
 
     if (nome.value === ""){
-        alert("Digite seu nome")
+        alert("Por favor, preencha o nome antes de fazer o pedido.")
     } else {
         let tamanho = selecionado.value
         let precot = 0

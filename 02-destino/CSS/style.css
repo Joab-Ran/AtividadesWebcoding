@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    --primary-color: #550FED;
+    --secondary-color: #CCB7F9;
+    --black: #1E1E1E;
+    --gray: #716C7C;
+    --border: #C8C2D6;
+    --background: #F2F4F5;
+}
+
+html{
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* reset */
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+ul, li{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* fim do reset */
+
+header{
+    background-color: var(--primary-color);
+    padding: 28px 0px;
+}
+
+.container{
+    width: 1205px;
+    margin: 0px auto;
+}
+
+.display-flex{
+    display: flex;
+}
+
+nav{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 84px;
+}
+
+nav ul{
+    gap: 72px;
+}
+
+nav ul li a{
+    color: var(--secondary-color);
+}
+
+nav ul li a:hover{
+    color: var(--black);
+}
+
+nav .menu-hamburger{
+    display: none;
+}
+
+nav .menu-hamburger span{
+    height: 4px;
+    width: 24px;
+    background-color: var(--background);
+    display: block;
+    margin-bottom: 4px;
+}
+
+form{
+    background-color: var(--background);
+    width: 843px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+div h2{
+    color: var(--background);
+    text-align: center;
+}
+
+form input{
+    background-color: transparent;
+    border: none;
+    height: 35px;
+    width: 60%;
+    margin: 0px;
+}
+
+.full{
+    background-color: var(--black);
+    color: var(--background);
+    text-transform: uppercase;
+    border: none;
+    padding: 14px 82px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.mobile{
+    display: none;
+    background-color: var(--black);
+    border: none;
+    height: 48px;
+    width: 48px;
+    border-radius: 8px;
+}
+
+.search{
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Media Querys*/
+
+@media (max-width: 1024px) {
+
+    header{
+        padding: 28px 38px;
+    }
+
+    .container{
+        width: 100%;
+    }
+    
+    nav ul{
+        display: none !important;
+    }
+
+    .menu-hamburger{
+        display: block !important;
+    }
+
+}
+
+@media (max-width: 744px) {
+
+    form{
+        width: 100%;
+    }
+
+    form input{
+        max-width: 100%;
+    }
+
+    button{
+        padding: 14px 40px;
+    }
+}
+
+@media (max-width: 402px) {
+
+    .busca h2{
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    form input{
+        max-width: 100%;
+        height: 48px;
+    }
+
+    button{
+        padding: 0px;
+    }
+
+    .full{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    nav a{
+        max-height: 40px !important;
+    }
+}

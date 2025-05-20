@@ -1,0 +1,302 @@
+@use 'variables' as var;
+@use 'mixins' as mx;
+@use 'queries' as que;
+
+body{
+    background-color: var.$background;
+}
+
+.container{
+    width: 100%;
+    max-width: var.$container;
+    margin: 0px auto;
+}
+
+.tag{
+    padding: 8px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    color: var.$primary-color;
+    background-color: var.$secondary-color;
+    display: inline-block;
+}
+
+header{
+    background-color: var.$primary-color;
+
+    .nav{
+        @include mx.displayflex(40px,space-between);
+
+        nav{
+            ul{
+                @include mx.displayflex(72px, center);
+
+                a{
+                    color: var.$border;
+
+                    &:hover{
+                        color: var.$black;
+                    }
+                }
+            }
+        }
+    }
+
+    .search{
+        width: 100%;
+        max-width: 843px;
+        margin: 0px auto;
+        padding: 100px 64px;
+
+        h2{
+            color: var.$background;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form{
+            background-color: white;
+            border-radius: 8px;
+            width: 843px;
+            height: 43px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            input{
+                border: none;
+                width: 72%;
+                height: 35px;
+            }
+
+            button{
+                background-color: var.$black;
+                border: none;
+                text-transform: uppercase;
+                border-radius: 8px;
+                color: white;
+                padding: 14px 82px;
+                font-weight: bold;
+
+                img{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    img{
+        width: 232px;
+        height: 60px;
+    }
+    
+}
+
+main{
+
+    @include que.tablet(){
+        padding: 10px;
+    }
+
+    h1{
+        padding-top: 60px;
+        padding-bottom: 32px;
+        max-width: 584px;
+    }
+
+    .state{
+
+        .cards{
+            @include mx.displayflex(36px, center);
+            margin-bottom: 60px;
+
+            .card{
+                border-radius: 8px;
+                border: 1px solid var.$border;
+                overflow: hidden;
+
+                &-content{
+                    padding: 24px;
+                    background-color: white;
+
+                    p{
+                        &:first-child{
+                            margin-bottom: 8px;
+                            font-weight: bold;
+                        }
+
+                        &:nth-child(2){
+                            margin-bottom: 24px;
+                            color: var.$gray;
+                        }
+                    }
+
+                    a{
+                        text-transform: uppercase;
+                        font-weight: bold;
+
+                        span{
+                            color: var.$primary-color;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.button{
+    background-color: var.$primary-color;
+    padding: 14px 72px;
+    border-radius: 8px;
+    color: white;
+
+    span{
+        color: var.$black;
+    }
+}
+
+.banner{
+    background-image: url('../images/barra.png');
+    background-repeat: no-repeat;
+    height: 320px;
+    background-position: center top;
+    margin-top: 96px;
+
+    .container{
+        @include mx.displayflex(0px, normal);
+        height: 100%;
+    }
+
+    .spacing{
+        height: 100px;
+        width: 602px;
+    }
+
+    .content{
+        width: 100%;
+        max-width: 420px;
+
+        .tag{
+            margin-bottom: 8px;
+        }
+        h3{
+            font-size: 4rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        
+    }
+}
+
+.overview{
+    margin-top: 96px;
+
+    h3{
+        font-size: 3.2rem;
+        margin-bottom: 32px;
+    }
+
+    .content{
+        background-color: white;
+        border: 1px solid var.$border;
+        border-radius: 8px;
+        padding: 54px;
+
+        .items{
+            @include mx.displayflex(0px, space-evenly);
+            text-align: center;
+
+            .item{
+
+                p:first-child{
+                    font-weight: bold;
+                    margin-bottom: 4px;
+                }
+
+                p:nth-child(2){
+                    font-size: 2.4rem;
+                    color: var.$gray;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    margin-top: 76px;
+
+    .container{
+        @include mx.displayflex(0px, start);
+        align-items: start;
+        flex-direction: column;
+
+        .content{
+        @include mx.displayflex(0px, center);
+        align-items: start;
+        height: 273px;
+
+            .apps{
+                @include mx.displayflex(0px, start);
+                width: 506px;
+
+                ul{
+                    @include mx.displayflex(19px, center);
+                    align-items: start;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    li{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img{
+                            height: 32px;
+                            width: 32px;
+                            margin-right: 8px;
+                        }
+
+                        a{
+                            font-weight: bold;
+                        }
+
+                    }
+                }
+            }
+
+            .navs{
+                @include mx.displayflex(96px, center);
+                align-items: start;
+                flex-direction: row;
+
+                nav{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: start;
+
+                    h4{
+                        margin-bottom: 16px;
+                    }
+
+                    a{
+                        color: var.$gray;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+    }
+        
+    .copyright{
+        margin-top: 45px;
+        margin-bottom: 31px;
+
+        small{
+            color: var.$gray;
+        }
+    }
+}

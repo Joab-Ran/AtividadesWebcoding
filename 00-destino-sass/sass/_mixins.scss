@@ -1,0 +1,21 @@
+@use 'variables' as var;
+
+@mixin displayflex($gap:32px, $justify:center){
+    display: flex;
+    gap: $gap;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin botao($bgc: 'roxo'){
+    width: 231px;
+    height: 48px;
+    color: white;
+    text-transform: uppercase;
+    padding: 14px 0px;
+    @if $bgc == 'roxo'{
+        background-color: var.$primary-color;
+    } @else {
+        background-color: var.$black;
+    }
+}
